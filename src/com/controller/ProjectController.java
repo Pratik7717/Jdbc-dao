@@ -9,4 +9,16 @@ public class ProjectController {
 		System.out.println("Project id: " + p.getId() + " project name : " + p.getName());
 	}
 	
+	public void getAllProjects() {
+		System.out.println("Get all projects in controller");
+	}
+	
+	public void updateProject(int id) {
+		System.out.println("Updated project with id " + id);
+	}
+	
+	public void deleteProject(int id) {
+		System.out.println("Deleted project with id : " + id);
+	}
+	
 }

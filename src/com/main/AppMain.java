@@ -23,15 +23,18 @@ public class AppMain {
 					break;
 					
 				case 2:
-					System.out.println("Show all projects");
+//					System.out.println("Show all projects");
+					controller.getAllProjects();
 					break;
 					
 				case 3:
-					System.out.println("Update project");
+//					System.out.println("Update project");
+					controller.updateProject(1);
 					break;
 					
 				case 4:
-					System.out.println("Delete project");
+//					System.out.println("Delete project");
+					controller.deleteProject(1);
 					break;
 					
 				default: 
