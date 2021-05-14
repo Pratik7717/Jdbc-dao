@@ -14,6 +14,14 @@ public class MyConnection {
 	public static Connection getConnection() { 
 
 		try {
+			
+			/*
+			 * loading of Driver class is automatically done via SPI
+			 * in this mysql-connector version.
+			 * The below code for loading using Class.forName()
+			 * is just written for information.  
+			 */
+			
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection(url, user, password);
 		} catch (SQLException e) {

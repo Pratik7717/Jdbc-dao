@@ -10,7 +10,10 @@ public class ProjectController {
 		Project p=new Project(id,name,manager);
 //		System.out.println("Project id: " + p.getId() + " project name : " + p.getName());
 		d=new ProjectDao();
-		d.insert(p);
+		int i=d.insert(p);
+		if(i>0) {
+			System.out.println("Record inserted..");
+		}
 	}
 	
 	public void getAllProjects() {
