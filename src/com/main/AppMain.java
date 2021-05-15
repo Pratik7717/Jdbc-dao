@@ -29,16 +29,18 @@ public class AppMain {
 					
 				case 3:
 //					System.out.println("Update project");
-					controller.updateProject(1);
+					System.out.print("Enter projectId to update : ");
+					controller.updateProject(sc.nextInt());
 					break;
 					
 				case 4:
 //					System.out.println("Delete project");
-					controller.deleteProject(1);
+					System.out.print("Enter projectId to delete : ");
+					controller.deleteProject(sc.nextInt());
 					break;
 					
 				default: 
-					System.out.println("Wrong choice..");
+					System.out.println("Wrong choice..\n");
 			}
 			
 			System.out.print("Do you want to continue? y/n : ");

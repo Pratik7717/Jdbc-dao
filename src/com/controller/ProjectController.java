@@ -12,20 +12,20 @@ public class ProjectController {
 		d=new ProjectDao();
 		int i=d.insert(p);
 		if(i>0) {
-			System.out.println("Record inserted..");
+			System.out.println("New project has been added..\n");
 		}
 	}
 	
 	public void getAllProjects() {
-		System.out.println("Get all projects in controller");
+		System.out.println("Get all projects in controller\n");
 	}
 	
 	public void updateProject(int id) {
-		System.out.println("Updated project with id " + id);
+		System.out.println("Updated project with id " + id + "\n");
 	}
 	
 	public void deleteProject(int id) {
-		System.out.println("Deleted project with id : " + id);
+		System.out.println("Deleted project with id : " + id + "\n");
 	}
 	
 }
