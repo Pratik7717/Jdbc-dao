@@ -1,8 +1,12 @@
 package com.dao;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Connection;
+import java.sql.Statement;
+import java.util.List;
+import java.util.LinkedList;
 
 import com.model.Project;
 
@@ -25,6 +29,29 @@ public class ProjectDao {
 		}
 		
 		return i;
+	}
+	
+	
+	public List<Project> get() {
+		Connection con = MyConnection.getConnection();
+		String query="select * from project";
+		ResultSet rs=null;
+		List<Project> ls=null;
+		try {
+			Statement st=con.createStatement();
+			rs=st.executeQuery(query);
+			ls=new LinkedList<>();
+			while(rs.next()) {
+				ls.add(new Project(rs.getInt("id"),rs.getString(2),rs.getString(3)));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Exception in get() " + e);
+			e.printStackTrace();
+		}
+	
+		return ls;
 	}
 	
 	
