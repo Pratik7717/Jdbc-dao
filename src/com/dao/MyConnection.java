@@ -14,6 +14,16 @@ public class MyConnection {
 	public static Connection getConnection() { 
 
 		try {
+			/*
+			 * A singleton class is basically a class for which only one instance is allowed 
+			 * to be created.
+			 * Here whenever we will try to call this method twice to get connection object
+			 * it will return same instance of Connection which was created before. 
+			 * 
+			 */
+			if(con!=null) {
+				return con;
+			}
 			
 			/*
 			 * loading of Driver class is automatically done via SPI
